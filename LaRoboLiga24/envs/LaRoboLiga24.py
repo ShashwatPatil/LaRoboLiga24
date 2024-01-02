@@ -32,12 +32,9 @@ class LaRoboLiga_Arena(gym.Env):
         path = os.path.dirname(os.path.abspath(__file__))
         print(path)
         if self.arena == "arena1":
-            p.loadURDF('urdf/arena/urdf/arena.urdf')
+            p.loadURDF('plane.urdf')
         elif self.arena == "arena2":
-            p.loadURDF('plane.urdf')
-        elif self.arena == "arena1":
-            p.loadURDF('plane.urdf')
-            p.loadURDF('urdf/arena/track.urdf',[0,0,0.05])
+            p.loadURDF('urdf/arena/urdf/arena.urdf')
         if self.car_location is not None:
             self.car = p.loadURDF('urdf/car/car.urdf', self.car_location, p.getQuaternionFromEuler([0, 0, 0]))
         if self.ball_location is not None:
