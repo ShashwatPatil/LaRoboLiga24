@@ -8,5 +8,5 @@ setuptools.setup(
     long_description=Path("Readme.md").read_text(),
     long_description_content_type="text/markdown",
     packages=setuptools.find_packages(include="LaRoboLiga24*"),
-    install_requires=['gym' == "0.22.0",'pybullet', 'opencv-contrib-python', 'numpy']
+    install_requires=['gym','pybullet', 'opencv-contrib-python', 'numpy']
 )
